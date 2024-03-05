@@ -1,0 +1,15 @@
+CC = gcc
+FLAGS = -Wall -g
+
+.PHONY: all clean
+
+all: sender reciever
+
+sender: sender.c 
+	$(CC) $(FLAGS) -o sender $^
+
+reciever: reciever.c 
+	$(CC) $(FLAGS) -o reciever $^
+
+clean:
+	rm -f sender reciever
